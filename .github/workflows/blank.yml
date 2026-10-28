@@ -1,0 +1,15 @@
+name: CI Pertama Saya
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil kode repositori
+        uses: actions/checkout@v4
+
+      - name: Jalankan tes halo dunia
+        run: echo "Halo! GitHub Actions berhasil berjalan!"
